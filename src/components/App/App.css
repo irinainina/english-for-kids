@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 15px;
+}
+
+.container h2 {
+  width: 100%;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  font-family: Roboto;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #FEB46B, #FD6A63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #FD6A63;
+}
+
+.btns {
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 20px 25px;
+  font-size: 24px;
+  margin: 25px;
+  width: 650px;
+  background: linear-gradient(40deg, #ffd86f, #fc6262);
+  color: #fff;
+  border-radius: 10px;
+  outline: 0 !important;
+  border-width: 1px;
+}
