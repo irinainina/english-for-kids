@@ -32,11 +32,14 @@
   font-size: 20px;
   text-align: center;
   width: 100%;
-  border-top: 2px solid rgb(240, 240, 240);
   pointer-events: none;
 }
 
 .card-header.active { 
   background: linear-gradient(40deg, #ffd86f, #fc6262);
   color: #fff;
+}
+
+.inactive {
+  opacity: 0.5;
 }

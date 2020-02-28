@@ -1,5 +1,15 @@
 body {
   margin: 0;
+  background-repeat: no-repeat;
+  background-position:  center 150px;
+}
+
+.succes {
+  background-image: url("../../assets/img/success.jpg");
+}
+
+.failure {
+  background-image: url("../../assets/img/failure.jpg");
 }
 
 .container {
@@ -53,11 +63,31 @@ body {
 }
 
 .rating {
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
   max-width: 1350px;
   margin: auto;
   height: 40px;
   overflow-x: hidden;
-  border: 1px solid green;
   
+  line-height: 36px;
+  font-size: 36px;
+  color: #fc6262;
 }
+
+.star-error {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/img/star.svg");
+  background-size: 40px 40px;
+}
+
+.star-succes {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/img/star-win.svg");
+  background-size: 40px 40px;
+}
+

@@ -11,7 +11,7 @@ class Card extends Component {
         <div className="card"
            style={{backgroundImage: `url(${image})`}}
             key={index} 
-            onClick={() => onCardClick(index)} >
+            onClick={(event) => onCardClick(event, index)} >
           <div className="card-header">{word}</div>
         </div>
       );
