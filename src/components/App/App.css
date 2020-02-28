@@ -31,11 +31,33 @@ body {
   box-sizing: border-box;
   padding: 20px 25px;
   font-size: 24px;
-  margin: 25px;
+  margin: 0 0 20px;
   width: 650px;
+  height: 65px;
   background: linear-gradient(40deg, #ffd86f, #fc6262);
   color: #fff;
   border-radius: 10px;
   outline: 0 !important;
   border-width: 1px;
+  transition: width .3s;
+}
+
+.repeat {
+  width: 65px;
+  font-size: 0;
+  background-image: url("../../assets/img/repeat.svg"), linear-gradient(40deg, #ffd86f, #fc6262);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 32px 32px, cover;
+  background-position: center center;
+}
+
+.rating {
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  height: 40px;
+  overflow-x: hidden;
+  border: 1px solid green;
+  
 }

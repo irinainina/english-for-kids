@@ -3,7 +3,10 @@ import './App.css';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
 import cardsData from '../../data/cards';
-// import correctAudio from '../../assets/audio/correct.mp3';
+import correctAudio from '../../assets/audio/correct.mp3';
+import errorAudio from '../../assets/audio/error.mp3';
+import successAudio from '../../assets/audio/success.mp3';
+import failureAudio from '../../assets/audio/failure.mp3';
 
 class App extends Component {
   state = {
@@ -37,11 +40,16 @@ class App extends Component {
     });
   }
   
-  playAudio(src) {
-    const audio = document.querySelector('.audio');
+  playAudio = (audio, src) => {
     audio.src= src; 
     audio.currentTime = 0;
     audio.play();
+  }
+
+  playCurrentAudio = (index) => {
+    const audio = document.querySelector('.audio');
+    const src= `${cardsData[this.state.page][index].audioSrc}`;
+    this.playAudio(audio, src);
   }
   
   onCardClick = (index) => {
@@ -49,8 +57,9 @@ class App extends Component {
       currentCard: index
     });
     if(!this.state.play) {
-      const src= `${cardsData[this.state.page][index].audioSrc}`;
-      this.playAudio(src);
+      this.playCurrentAudio(index);
+    } else {
+      this.getWinOrError(index);
     }
   }
   
@@ -58,26 +67,48 @@ class App extends Component {
     this.setState({
       play: true,
     });
-    const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step]; 
+    const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step];
+    const audio = document.querySelector('.audio');
     const src= `${cardsData[this.state.page][randomItem].audioSrc}`;
-    this.playAudio(src);
+    this.playAudio(audio, src);
+  }
+  
+  getWinOrError = (index) => {
+    const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step];
+    const sound = document.querySelector('.soundEffects');
+    const audio = document.querySelector('.audio');
+    if(index !== randomItem) {      
+      const src= `${errorAudio}`;
+      this.playAudio(sound, src);
+    } else {
+      const src= `${correctAudio}`;
+      this.playAudio(sound, src);
+      const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step - 1];    
+      const src1= `${cardsData[this.state.page][randomItem].audioSrc}`;
+      setTimeout(() => this.playAudio(audio, src1), 500);
+      this.setState((prevState, props) => ({
+        step: prevState.step + 1
+      }));
+    }
   }
 
   render() {
-    const { page } = this.state; 
+    const { page, play } = this.state; 
     return (
       <>
         <Header onClick={this.getNextPage}
                 page={page} />
+        <div className="rating"></div>
         <Card page={page}
               onCardClick={this.onCardClick} />
         <div className="btns">      
-          <button className="btn"
+          <button className={play ? "btn repeat" : "btn"}
                   onClick={this.playCame}>
            Play
           </button>
         </div>
         <audio className="audio"></audio>
+        <audio className="soundEffects"></audio>
       </>
     );
   }
