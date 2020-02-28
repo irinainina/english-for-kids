@@ -3,10 +3,12 @@ import './App.css';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
 import cardsData from '../../data/cards';
+// import correctAudio from '../../assets/audio/correct.mp3';
 
 class App extends Component {
   state = {
     page: 1,
+    currentCard: 0,
     play: false,
     randomArr: [],
     step: 1
@@ -29,40 +31,53 @@ class App extends Component {
       return arr;
   }
   
-  playCame = () => {
-    this.setState({
-      play: true,
-    });
-    const currentItem = this.state.randomArr[this.state.randomArr.length-this.state.step];
-    const audio = document.querySelector('audio');
-    audio.src= `${cardsData[this.state.page][currentItem].audioSrc}`; 
-    audio.currentTime = 0;
-    audio.play();
-  }
-
   getNextPage = (index) => {
     this.setState({
       page: index + 1
     });
   }
   
+  playAudio(src) {
+    const audio = document.querySelector('.audio');
+    audio.src= src; 
+    audio.currentTime = 0;
+    audio.play();
+  }
+  
+  onCardClick = (index) => {
+    this.setState({
+      currentCard: index
+    });
+    if(!this.state.play) {
+      const src= `${cardsData[this.state.page][index].audioSrc}`;
+      this.playAudio(src);
+    }
+  }
+  
+  playCame = () => {
+    this.setState({
+      play: true,
+    });
+    const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step]; 
+    const src= `${cardsData[this.state.page][randomItem].audioSrc}`;
+    this.playAudio(src);
+  }
+
   render() {
-    const { page, play, randomArr, step } = this.state; 
+    const { page } = this.state; 
     return (
       <>
         <Header onClick={this.getNextPage}
                 page={page} />
         <Card page={page}
-              play={play}
-              randomArr={randomArr}
-              step={step} />
+              onCardClick={this.onCardClick} />
         <div className="btns">      
           <button className="btn"
                   onClick={this.playCame}>
            Play
           </button>
         </div>
-        <audio></audio>
+        <audio className="audio"></audio>
       </>
     );
   }
