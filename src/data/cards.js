@@ -100,8 +100,83 @@ import smileAudio from '../assets/audio/smile.mp3';
 import laughImage from '../assets/img/laugh.jpg';
 import laughAudio from '../assets/audio/laugh.mp3';
 
+import argueImage from '../assets/img/argue.jpg';
+import argueAudio from '../assets/audio/argue.mp3';
+import buildImage from '../assets/img/build.jpg';
+import buildAudio from '../assets/audio/build.mp3';
+import carryImage from '../assets/img/carry.jpg';
+import carryAudio from '../assets/audio/carry.mp3';
+import catchImage from '../assets/img/catch.jpg';
+import catchAudio from '../assets/audio/catch.mp3';
+import driveImage from '../assets/img/drive.jpg';
+import driveAudio from '../assets/audio/drive.mp3';
+import dropImage from '../assets/img/drop.jpg';
+import dropAudio from '../assets/audio/drop.mp3';
+import pullImage from '../assets/img/pull.jpg';
+import pullAudio from '../assets/audio/pull.mp3';
+import pushImage from '../assets/img/push.jpg';
+import pushAudio from '../assets/audio/push.mp3';
+
+import bigImage from '../assets/img/big.jpg';
+import bigAudio from '../assets/audio/big.mp3';
+import smallImage from '../assets/img/small.jpg';
+import smallAudio from '../assets/audio/small.mp3';
+import fastImage from '../assets/img/fast.jpg';
+import fastAudio from '../assets/audio/fast.mp3';
+import slowImage from '../assets/img/slow.jpg';
+import slowAudio from '../assets/audio/slow.mp3';
+import friendlyImage from '../assets/img/friendly.jpg';
+import friendlyAudio from '../assets/audio/friendly.mp3';
+import unfriendlyImage from '../assets/img/unfriendly.jpg';
+import unfriendlyAudio from '../assets/audio/unfriendly.mp3';
+import youngImage from '../assets/img/young.jpg';
+import youngAudio from '../assets/audio/young.mp3';
+import oldImage from '../assets/img/old.jpg';
+import oldAudio from '../assets/audio/old.mp3';
+
 const cards = [ 
-  ['Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions'],
+  [
+    {
+      category: 'Action (set A)',
+      image: danceImage,
+      audioSrc: cryAudio
+    },
+    {
+      category: 'Action (set B)',
+      image: swimImage,
+      audioSrc: danceAudio
+    },
+    {
+      category: 'Action (set C)',
+      image: dropImage,
+      audioSrc: diveAudio
+    },
+    {
+      category: 'Animal (set A)',
+      image: catImage,
+      audioSrc: drawAudio
+    },
+    {
+      category: 'Animal (set B)',
+      image: birdImage,
+      audioSrc: fishAudio
+    },
+    {
+      category: 'Adjective',
+      image: friendlyImage,
+      audioSrc: flyAudio
+    },
+    {
+      category: 'Clothes',
+      image: blouseImage,
+      audioSrc: hugAudio
+    },
+    {
+      category: 'Emotion',
+      image: smileImage,
+      audioSrc: jumpAudio
+    }
+  ],
   [
     {
       word: 'cry',
@@ -204,6 +279,56 @@ const cards = [
   ],
   [
     {
+      word: 'argue',
+      translation: 'спорить',
+      image: argueImage,
+      audioSrc: argueAudio
+    },
+    {
+      word: 'build',
+      translation: 'строить',
+      image: buildImage,
+      audioSrc: buildAudio
+    },
+    {
+      word: 'carry',
+      translation: 'нести',
+      image: carryImage,
+      audioSrc: carryAudio
+    },
+    {
+      word: 'catch',
+      translation: 'ловить',
+      image: catchImage,
+      audioSrc: catchAudio
+    },
+    {
+      word: 'drive',
+      translation: 'водить машину',
+      image: driveImage,
+      audioSrc: driveAudio
+    },
+    {
+      word: 'drop',
+      translation: 'падать',
+      image: dropImage,
+      audioSrc: dropAudio
+    },
+    {
+      word: 'pull',
+      translation: 'тянуть',
+      image: pullImage,
+      audioSrc: pullAudio
+    },
+    {
+      word: 'push',
+      translation: 'толкать',
+      image: pushImage,
+      audioSrc: pushAudio
+    }
+  ],
+  [
+    {
       word: 'cat',
       translation: 'кот',
       image: catImage,
@@ -300,6 +425,56 @@ const cards = [
       translation: 'дельфин',
       image: dolphinImage,
       audioSrc: dolphinAudio
+    }
+  ],
+    [
+    {
+      word: 'big',
+      translation: 'большой',
+      image: bigImage,
+      audioSrc: bigAudio
+    },
+    {
+      word: 'small',
+      translation: 'маленький',
+      image: smallImage,
+      audioSrc: smallAudio
+    },
+    {
+      word: 'fast',
+      translation: 'быстрый',
+      image: fastImage,
+      audioSrc: fastAudio
+    },
+    {
+      word: 'slow',
+      translation: 'медленный',
+      image: slowImage,
+      audioSrc: slowAudio
+    },
+    {
+      word: 'friendly',
+      translation: 'дружелюбный',
+      image: friendlyImage,
+      audioSrc: friendlyAudio
+    },
+    {
+      word: 'unfriendly',
+      translation: 'недружелюбный',
+      image: unfriendlyImage,
+      audioSrc: unfriendlyAudio
+    },
+    {
+      word: 'young',
+      translation: 'молодой',
+      image: youngImage,
+      audioSrc: youngAudio
+    },
+    {
+      word: 'old',
+      translation: 'старый',
+      image: oldImage,
+      audioSrc: oldAudio
     }
   ],
   [
