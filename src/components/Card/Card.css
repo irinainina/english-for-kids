@@ -1,23 +1,3 @@
-.card {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: flex-end;
-  width: 300px;
-  height: 250px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 20px 25px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-  transition: .3s;
-}
-
-.card:hover,
-.card:active {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-}
-
 .card audio {
   width: 300px;
   height: 250px;
@@ -26,7 +6,7 @@
 }
 
 .card-header {   
-  margin-top: auto;
+  margin-top: 200px;
   padding: 12px 15px;
   font-family: "Roboto";
   font-size: 20px;
@@ -42,4 +22,64 @@
 
 .inactive {
   opacity: 0.5;
+}
+
+.rotate {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url("../../assets/img/rotate.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  bottom: 0;
+  left: 0;
+  opacity: .50;
+  transition: .7s;
+}
+
+.rotate:hover {
+  opacity: .9;
+  transform: scale(1.1);
+}
+
+.card-container {
+  perspective: 500px;
+}
+
+.front, .back, .rotate {
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY( 180deg );
+}
+
+.card {
+  position: relative;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  width: 300px;
+  height: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px 25px;  
+  box-shadow: 0 1px 3px 0 #ccc;
+}
+
+.translate {
+  transform: rotateY(180deg);
+}
+
+.front, .back { 
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
