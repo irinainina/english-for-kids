@@ -9,28 +9,36 @@ class Card extends Component {
   }
   
   flop = (event) => {
-    event.target.firstElementChild.classList.remove('translate');
+    const target = event.target.firstElementChild;
+    if(target && target.classList.contains('translate')) {
+     target.classList.remove('translate');
+   }
   }
   
-  renderCards = (arr, onCardClick, onBtnClick) => {
+  renderCards = (arr, onCardClick, onBtnClick, play) => {
     return arr.map((item, index) => {
       const { word, image, translation } = item;    
       return (      
         <div className="card-container" 
              onMouseLeave={(event) => this.flop(event)}
              key={index}>
-          <div className="card">
+          <div className={play ? "card card-cover" : "card"}>
             <div className="front"
                  style={{backgroundImage: `url(${image})`}} 
                  onClick={(event) => onCardClick(event, index)}>
-              <div className="card-header">{word}</div>
+              <div className={play ? "card-header none" : "card-header"} >
+                {word}
+              </div>              
             </div>
             <div className="back"
                  style={{backgroundImage: `url(${image})`}}>             
-              <div className="card-header">{translation}</div>
+              <div className={play ? "card-header none" : "card-header"}>
+                {translation}
+              </div>              
             </div>
-            <div className="rotate"
-                 onClick={(event) => this.flip(event)}></div>
+            <div className={play ? "rotate none" : "rotate"}
+                 onClick={(event) => this.flip(event)}>
+            </div>
           </div>
         </div>
       );
@@ -39,14 +47,14 @@ class Card extends Component {
 
   render() { 
     const {page, onCardClick, onBtnClick, play} = this.props;
-    const cards = this.renderCards(cardsData[page], onCardClick);
+    const cards = this.renderCards(cardsData[page], onCardClick, onBtnClick, play);
       return (
        <div className="container">
-        <div className="rating"></div>
+        <div className={play ? "rating" : "rating none" } ></div>
           {cards}
           <div className="btns">      
-            <button className={play ? "btn repeat" : "btn"}
-                    onClick={onBtnClick}>
+            <button className={play ? "btn" : "btn none"}
+                    onClick={(event) => onBtnClick(event)} >
            Play
           </button>
         </div>

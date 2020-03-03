@@ -15,7 +15,7 @@ const renderHeader = (arr, fn, page) => {
   });
 }
 
-function Header({onClick, page, onHeaderClick}) {
+function Header({onClick, page, onHeaderClick, play}) {
   const headerItems = renderHeader(cardsData[0], onClick, page);
   return (
    <nav role="navigation">
@@ -24,7 +24,7 @@ function Header({onClick, page, onHeaderClick}) {
       <span></span>
       <span></span>
       <span></span>
-      <ul className="menu" >
+      <ul className={play ? "menu" : "menu green"} >
         <Link to={'/'} className={page === 0 ? "header-item active" : "header-item"}
          onClick={onHeaderClick}>
           Main Page

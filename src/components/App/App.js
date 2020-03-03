@@ -4,6 +4,7 @@ import './App.css';
 import Card from '../Card/Card';
 import Header from '../Header/Header';
 import MainPage from '../MainPage/MainPage';
+import Switch from '../Switch/Switch';
 import cardsData from '../../data/cards';
 import correctAudio from '../../assets/audio/correct.mp3';
 import errorAudio from '../../assets/audio/error.mp3';
@@ -23,7 +24,8 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      randomArr: this.shuffle([0, 1, 2, 3, 4, 5, 6, 7])
+      randomArr: this.shuffle([0, 1, 2, 3, 4, 5, 6, 7]),
+      endGame: true
     });
   }
 
@@ -43,19 +45,24 @@ class App extends Component {
       page: index + 1,
       randomArr: this.shuffle([0, 1, 2, 3, 4, 5, 6, 7]),
       currentCard: 0,
-      play: false,
       step: 1,
       errors: 0,
       endGame: false
-    });    
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => { 
-      card.style.color = '#000000';
-      card.style.backgroundSize = 'contain';
-      card.style.backgroundPosition = 'center top';      if(card.classList.contains('inactive')) {
-        card.classList.remove('inactive')
+    }); 
+    const fronts = document.querySelectorAll('.front');
+    fronts.forEach(front => { 
+      if(front.classList.contains('inactive')) {
+        front.classList.remove('inactive')
       }
-    }) 
+    });
+    const rating = document.querySelector('.rating');
+    if(rating) {
+      rating.innerHTML = '';
+    } 
+    const btn = document.querySelector('.btn');
+    if(btn && btn.classList.contains('repeat')) {
+      btn.classList.remove('repeat');
+    }
   }
   
   playAudio = (audio, src) => {
@@ -82,20 +89,14 @@ class App extends Component {
     }
   }
   
-  playCame = () => {
-    this.setState({
-      play: true,
-    });
+  playCame = (event) => {
+    if(!event.target.classList.contains('repeat')) {
+      event.target.classList.add('repeat');
+    }
     const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step];
     const audio = document.querySelector('.audio');
     const src= `${cardsData[this.state.page][randomItem].audioSrc}`;
     this.playAudio(audio, src);
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      card.style.color = 'transparent';
-      card.style.backgroundSize = 'cover';
-      card.style.backgroundPosition = 'center center';
-    });
   }
   
   getWinOrError = (event, index) => {
@@ -149,6 +150,7 @@ class App extends Component {
     rating.style.justifyContent = 'center';
     const cards = document.querySelectorAll('.card');
     const btn = document.querySelector('.btn');
+    const switchContainer = document.querySelector('.switch-container');
     
     if(this.state.errors === 0) {
       body.classList.add('succes');
@@ -163,6 +165,7 @@ class App extends Component {
     if(result === 'end') { 
       cards.forEach(card => card.style.display = 'none'); 
       btn.style.display = 'none';
+      switchContainer.style.display = 'none';
       this.playAudio(sound, src);
     } else if(result === 'start') {
       rating.textContent = '';
@@ -172,6 +175,7 @@ class App extends Component {
       rating.style.display = 'flex';
       cards.forEach(card => card.style.display = 'flex');
       btn.style.display = 'inline-block';
+      switchContainer.style.display = 'block';
       this.setState({ 
         endGame: true,
         page: 0
@@ -193,27 +197,61 @@ class App extends Component {
     });
  }
   
+  onSwitchChange = () => {
+    this.setState((prevState) => ({
+      play: !prevState.play,
+      randomArr: this.shuffle([0, 1, 2, 3, 4, 5, 6, 7]),
+      step: 1,
+      errors: 0
+    }));
+    const fronts = document.querySelectorAll('.front');
+    fronts.forEach(front => { 
+      if(front.classList.contains('inactive')) {
+        front.classList.remove('inactive')
+      }
+    });
+    const rating = document.querySelector('.rating');
+    if(rating) {
+      rating.innerHTML = '';
+    }    
+  }
+  
   render() {
     const { page, play, endGame } = this.state; 
     if(endGame) 
     return (
-      <div onClick={(event) => this.closeMenu(event)}>
+      <div className="app-container" 
+           onClick={(event) => this.closeMenu(event)}>
+      <div className="header-container">
         <Header onClick={this.getNextPage}
-                page={page} />
-        <MainPage onClick={this.getNextPage}
-                page={page}  />
+                onHeaderClick={this.onHeaderClick}
+                page={page} 
+                play={play} />
+        <Switch play={play}
+                onSwitchChange={this.onSwitchChange} />
+      </div>
+      <MainPage onClick={this.getNextPage}
+                page={page}
+                play={play} />
       </div>
     );
     
     return (
-      <div onClick={(event) => this.closeMenu(event)}>
+      <div className="app-container" 
+           onClick={(event) => this.closeMenu(event)}>
+      <div className="header-container">
         <Header onClick={this.getNextPage}
-        onHeaderClick={this.onHeaderClick}
-                page={page} />
+                onHeaderClick={this.onHeaderClick}
+                page={page} 
+                play={play} />
+        <Switch play={play}
+                onSwitchChange={this.onSwitchChange} />
+      </div>
         <Route
           path={'/'}
           render={() => <MainPage onClick={this.getNextPage}
-            page={page} />}
+            page={page} 
+            play={play} />}
           exact
         />
         <Route
@@ -221,7 +259,7 @@ class App extends Component {
           render={() => <Card page={page}
           play={play}
           onCardClick={this.onCardClick}
-          onBtnClick={this.playCame}/>}
+          onBtnClick={(event) => this.playCame(event)} />}
           exact
         />
       </div>

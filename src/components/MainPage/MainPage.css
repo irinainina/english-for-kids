@@ -18,6 +18,10 @@
   transition: .3s;
 }
 
+.main-card.green {
+  background: linear-gradient(180deg, #0099AE 0%, #00BF82 40%, #ffffff 40%, #ffffff 100%);
+}
+
 .main-card img {
   width: 140px;
   height: 140px;
@@ -32,5 +36,5 @@
 }
 
 .main-container {
-  padding-top: 95px;
+  padding-top: 55px;
 }
