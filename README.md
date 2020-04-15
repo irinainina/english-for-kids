@@ -20,7 +20,7 @@ cross-check: https://cross-check-english-for-kids.netlify.com/
 ### Demo
 https://english-for-kids.netlify.com/ (версия без Hacker scope)
 
-## Описание страниц
+## <a name="description">Описание страниц</a>
 1. Главная страница приложения
 - на главной странице приложения размещаются ссылки на страницы с категориями слов
 - минимальное количество категорий - восемь
