@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f12b48862a680e6db3a74d96b8629f3d",
+    "revision": "20125577685135d3f9d24e224630e1f5",
     "url": "/english-for-kids/index.html"
   },
   {
-    "revision": "a93b38044d307a0fc98e",
+    "revision": "a83fcbfc5828dd2a8fa4",
     "url": "/english-for-kids/static/css/main.bf375304.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/english-for-kids/static/js/2.67b03d29.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a93b38044d307a0fc98e",
-    "url": "/english-for-kids/static/js/main.617529d7.chunk.js"
+    "revision": "a83fcbfc5828dd2a8fa4",
+    "url": "/english-for-kids/static/js/main.5f840480.chunk.js"
   },
   {
     "revision": "0d6fc8351970eefa88ff",
