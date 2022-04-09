@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8604ded05fbcaefbbbc1e4135664ce7f",
+    "revision": "ac6dad49f4df105ee40b5fed68bd3e93",
     "url": "/english-for-kids/index.html"
   },
   {
-    "revision": "7bf4604a3da3099805e8",
+    "revision": "f5e40d93eafa0e38eb96",
     "url": "/english-for-kids/static/css/main.704907d1.chunk.css"
   },
   {
-    "revision": "d7cf39d985e8565d67db",
-    "url": "/english-for-kids/static/js/2.815cce90.chunk.js"
+    "revision": "c9d160c728ac3bf33ea7",
+    "url": "/english-for-kids/static/js/2.2c8d2696.chunk.js"
   },
   {
     "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/english-for-kids/static/js/2.815cce90.chunk.js.LICENSE.txt"
+    "url": "/english-for-kids/static/js/2.2c8d2696.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7bf4604a3da3099805e8",
-    "url": "/english-for-kids/static/js/main.51ea6c65.chunk.js"
+    "revision": "f5e40d93eafa0e38eb96",
+    "url": "/english-for-kids/static/js/main.a52b8f49.chunk.js"
   },
   {
-    "revision": "0d6fc8351970eefa88ff",
-    "url": "/english-for-kids/static/js/runtime-main.d2653291.js"
+    "revision": "e342f9d67b5f20c0e4c9",
+    "url": "/english-for-kids/static/js/runtime-main.dcbfe61c.js"
   },
   {
     "revision": "66b1074a0addfb2b98bd2036a481981e",
