@@ -75,7 +75,8 @@ class App extends Component {
 
   playCurrentAudio = (index) => {
     const audio = document.querySelector('.audio');
-    const src= `https://wooordhunt.ru/data/sound/word/us/mp3/${cardsData[this.state.page][index].word}.mp3`;
+    const src= `https://wooordhunt.ru/data/sound/sow/us/${cardsData[this.state.page][index].word}.mp3`;
+    console.log(src);
     this.playAudio(audio, src);
   }
   

@@ -89,6 +89,7 @@ h2.card-title.green {
 }
 
 .card:hover{
+  cursor: pointer;
   box-shadow: -1px 5px 15px 0px rgba(0,0,0,0.5);
 }
 
