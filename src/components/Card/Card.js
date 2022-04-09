@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import './Card.css';
 import cardsData from '../../data/cards';
 
-
 class Card extends Component {
   flip = (event) => {
     event.target.parentElement.classList.add('translate');
@@ -15,16 +14,27 @@ class Card extends Component {
    }
   }
   
-  renderCards = (arr, onCardClick, onBtnClick, play) => {
+  deleteClass = () => {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      if(!card.querySelector(':hover') && card.classList.contains('translate')) {
+        card.classList.remove('translate')
+      }
+    })
+  }
+  
+  renderCards = (arr, onCardClick, onBtnClick, play,playActive) => {
     return arr.map((item, index) => {
       const { word, image, translation } = item;    
       return (      
         <div className="card-container" 
+             onMouseOver={this.deleteClass}
              onMouseLeave={(event) => this.flop(event)}
              key={index}>
           <div className={play ? "card card-cover" : "card"}>
             <div className="front"
                  style={{backgroundImage: `url(${image})`}} 
+                 onMouseOver={this.deleteClass}
                  onClick={(event) => onCardClick(event, index)}>
               <div className={play ? "card-header none" : "card-header"} >
                 {word}
@@ -46,16 +56,17 @@ class Card extends Component {
   }
 
   render() { 
-    const {page, onCardClick, onBtnClick, play} = this.props;
-    const cards = this.renderCards(cardsData[page], onCardClick, onBtnClick, play);
+    const {page, onCardClick, onBtnClick, play, playActive} = this.props;
+    const cards = this.renderCards(cardsData[page], onCardClick, onBtnClick, play, playActive);
       return (
        <div className="container">
-        <div className={play ? "rating" : "rating none" } ></div>
+        <h2 className={play ? "card-title" : "card-title green"}>{page > 0 ? cardsData[0][page - 1].category : ''}</h2>
+        <div className={(play && playActive) ? "rating" : "rating none" } ></div>
           {cards}
           <div className="btns">      
             <button className={play ? "btn" : "btn none"}
                     onClick={(event) => onBtnClick(event)} >
-           Play
+           Start game
           </button>
         </div>
         <audio className="audio"></audio>

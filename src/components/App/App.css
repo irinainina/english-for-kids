@@ -6,10 +6,6 @@ body {
   font-family: Roboto;
 }
 
-.app-container {
-  min-height: 100vh;
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -32,18 +28,18 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 15px;
+  max-width: 1440px;
+  margin: auto;
 }
 
 .container h2 {
   width: 100%;
-  font-size: 40px;
+  font-size: 36px;
   margin: 0;
   text-align: center;
   font-family: Roboto;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #FEB46B, #FD6A63);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+  text-transform: uppercase;  
   color: #FD6A63;
 }
 
@@ -51,7 +47,7 @@ body {
 @media (max-width: 1430px) {
   .header-container {
     max-width: 1000px;
-  }
+  }  
 }
 
 @media (max-width: 1080px) {

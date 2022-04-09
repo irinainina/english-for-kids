@@ -1,580 +1,676 @@
 import cryImage from '../assets/img/cry.jpg';
-import cryAudio from '../assets/audio/cry.mp3';
 import danceImage from '../assets/img/dance.jpg';
-import danceAudio from '../assets/audio/dance.mp3';
 import diveImage from '../assets/img/dive.jpg';
-import diveAudio from '../assets/audio/dive.mp3';
 import drawImage from '../assets/img/draw.jpg';
-import drawAudio from '../assets/audio/draw.mp3';
 import fishImage from '../assets/img/fish.jpg';
-import fishAudio from '../assets/audio/fish.mp3';
 import flyImage from '../assets/img/fly.jpg';
-import flyAudio from '../assets/audio/fly.mp3';
 import hugImage from '../assets/img/hug.jpg';
-import hugAudio from '../assets/audio/hug.mp3';
 import jumpImage from '../assets/img/jump.jpg';
-import jumpAudio from '../assets/audio/jump.mp3';
 
 import openImage from '../assets/img/open.jpg';
-import openAudio from '../assets/audio/open.mp3';
 import playImage from '../assets/img/play.jpg';
-import playAudio from '../assets/audio/play.mp3';
 import pointImage from '../assets/img/point.jpg';
-import pointAudio from '../assets/audio/point.mp3';
 import rideImage from '../assets/img/ride.jpg';
-import rideAudio from '../assets/audio/ride.mp3';
 import runImage from '../assets/img/run.jpg';
-import runAudio from '../assets/audio/run.mp3';
 import singImage from '../assets/img/sing.jpg';
-import singAudio from '../assets/audio/sing.mp3';
 import skipImage from '../assets/img/skip.jpg';
-import skipAudio from '../assets/audio/skip.mp3';
 import swimImage from '../assets/img/swim.jpg';
-import swimAudio from '../assets/audio/swim.mp3';
 
 import catImage from '../assets/img/cat.jpg';
-import catAudio from '../assets/audio/cat.mp3';
 import chickImage from '../assets/img/chick.jpg';
-import chickAudio from '../assets/audio/chick.mp3';
 import chickenImage from '../assets/img/chicken.jpg';
-import chickenAudio from '../assets/audio/chicken.mp3';
 import dogImage from '../assets/img/dog.jpg';
-import dogAudio from '../assets/audio/dog.mp3';
 import horseImage from '../assets/img/horse.jpg';
-import horseAudio from '../assets/audio/horse.mp3';
 import pigImage from '../assets/img/pig.jpg';
-import pigAudio from '../assets/audio/pig.mp3';
 import rabbitImage from '../assets/img/rabbit.jpg';
-import rabbitAudio from '../assets/audio/rabbit.mp3';
 import sheepImage from '../assets/img/sheep.jpg';
-import sheepAudio from '../assets/audio/sheep.mp3';
 
 import birdImage from '../assets/img/bird.jpg';
-import birdAudio from '../assets/audio/bird.mp3';
 import fish1Image from '../assets/img/fish1.jpg';
-import fish1Audio from '../assets/audio/fish.mp3';
 import frogImage from '../assets/img/frog.jpg';
-import frogAudio from '../assets/audio/frog.mp3';
 import giraffeImage from '../assets/img/giraffe.jpg';
-import giraffeAudio from '../assets/audio/giraffe.mp3';
 import lionImage from '../assets/img/lion.jpg';
-import lionAudio from '../assets/audio/lion.mp3';
 import mouseImage from '../assets/img/mouse.jpg';
-import mouseAudio from '../assets/audio/mouse.mp3';
 import turtleImage from '../assets/img/turtle.jpg';
-import turtleAudio from '../assets/audio/turtle.mp3';
 import dolphinImage from '../assets/img/dolphin.jpg';
-import dolphinAudio from '../assets/audio/dolphin.mp3';
 
 import skirtImage from '../assets/img/skirt.jpg';
-import skirtAudio from '../assets/audio/skirt.mp3';
 import pantsImage from '../assets/img/pants.jpg';
-import pantsAudio from '../assets/audio/pants.mp3';
 import blouseImage from '../assets/img/blouse.jpg';
-import blouseAudio from '../assets/audio/blouse.mp3';
 import dressImage from '../assets/img/dress.jpg';
-import dressAudio from '../assets/audio/dress.mp3';
 import bootImage from '../assets/img/boot.jpg';
-import bootAudio from '../assets/audio/boot.mp3';
 import shirtImage from '../assets/img/shirt.jpg';
-import shirtAudio from '../assets/audio/shirt.mp3';
 import coatImage from '../assets/img/coat.jpg';
-import coatAudio from '../assets/audio/coat.mp3';
 import shoeImage from '../assets/img/shoe.jpg';
-import shoeAudio from '../assets/audio/shoe.mp3';
 
 import sadImage from '../assets/img/sad.jpg';
-import sadAudio from '../assets/audio/sad.mp3';
 import angryImage from '../assets/img/angry.jpg';
-import angryAudio from '../assets/audio/angry.mp3';
 import happyImage from '../assets/img/happy.jpg';
-import happyAudio from '../assets/audio/happy.mp3';
 import tiredImage from '../assets/img/tired.jpg';
-import tiredAudio from '../assets/audio/tired.mp3';
 import surprisedImage from '../assets/img/surprised.jpg';
-import surprisedAudio from '../assets/audio/surprised.mp3';
 import scaredImage from '../assets/img/scared.jpg';
-import scaredAudio from '../assets/audio/scared.mp3';
 import smileImage from '../assets/img/smile.jpg';
-import smileAudio from '../assets/audio/smile.mp3';
 import laughImage from '../assets/img/laugh.jpg';
-import laughAudio from '../assets/audio/laugh.mp3';
 
 import argueImage from '../assets/img/argue.jpg';
-import argueAudio from '../assets/audio/argue.mp3';
 import buildImage from '../assets/img/build.jpg';
-import buildAudio from '../assets/audio/build.mp3';
 import carryImage from '../assets/img/carry.jpg';
-import carryAudio from '../assets/audio/carry.mp3';
 import catchImage from '../assets/img/catch.jpg';
-import catchAudio from '../assets/audio/catch.mp3';
 import driveImage from '../assets/img/drive.jpg';
-import driveAudio from '../assets/audio/drive.mp3';
 import dropImage from '../assets/img/drop.jpg';
-import dropAudio from '../assets/audio/drop.mp3';
 import pullImage from '../assets/img/pull.jpg';
-import pullAudio from '../assets/audio/pull.mp3';
 import pushImage from '../assets/img/push.jpg';
-import pushAudio from '../assets/audio/push.mp3';
 
 import bigImage from '../assets/img/big.jpg';
-import bigAudio from '../assets/audio/big.mp3';
 import smallImage from '../assets/img/small.jpg';
-import smallAudio from '../assets/audio/small.mp3';
 import fastImage from '../assets/img/fast.jpg';
-import fastAudio from '../assets/audio/fast.mp3';
 import slowImage from '../assets/img/slow.jpg';
-import slowAudio from '../assets/audio/slow.mp3';
 import friendlyImage from '../assets/img/friendly.jpg';
-import friendlyAudio from '../assets/audio/friendly.mp3';
 import unfriendlyImage from '../assets/img/unfriendly.jpg';
-import unfriendlyAudio from '../assets/audio/unfriendly.mp3';
 import youngImage from '../assets/img/young.jpg';
-import youngAudio from '../assets/audio/young.mp3';
 import oldImage from '../assets/img/old.jpg';
-import oldAudio from '../assets/audio/old.mp3';
+
+import cleanImage from '../assets/img/clean.jpg';
+import cookImage from '../assets/img/cook.jpg';
+import eatImage from '../assets/img/eat.jpg';
+import readImage from '../assets/img/read.jpg';
+import sitImage from '../assets/img/sit.jpg';
+import sleepImage from '../assets/img/sleep.jpg';
+import standImage from '../assets/img/stand.jpg';
+import talkImage from '../assets/img/talk.jpg';
+
+import airplaneImage from '../assets/img/airplane.jpg';
+import busImage from '../assets/img/bus.jpg';
+import bikeImage from '../assets/img/bike.jpg';
+import carImage from '../assets/img/car.jpg';
+import boatImage from '../assets/img/boat.jpg';
+import tractorImage from '../assets/img/tractor.jpg';
+import trainImage from '../assets/img/train.jpg';
+import shipImage from '../assets/img/ship.jpg';
+
+import sunImage from '../assets/img/sun.jpg';
+import moonImage from '../assets/img/moon.jpg';
+import cloudImage from '../assets/img/cloud.jpg';
+import rainImage from '../assets/img/rain.jpg';
+import waterfallImage from '../assets/img/waterfall.jpg';
+import rainbowImage from '../assets/img/rainbow.jpg';
+import starsImage from '../assets/img/stars.jpg';
+import dewImage from '../assets/img/dew.jpg';
+
+import grassImage from '../assets/img/grass.jpg';
+import treeImage from '../assets/img/tree.jpg';
+import flowerImage from '../assets/img/flower.jpg';
+import forestImage from '../assets/img/forest.jpg';
+import riverImage from '../assets/img/river.jpg';
+import desertImage from '../assets/img/desert.jpg';
+import seaImage from '../assets/img/sea.jpg';
+import gardenImage from '../assets/img/garden.jpg';
 
 const cards = [ 
   [
     {
-      category: 'Action (set A)',
-      image: danceImage,
-      audioSrc: cryAudio
+      category: 'Action 1',
+      image: hugImage,
+      color: '#00FFFF'
     },
     {
-      category: 'Action (set B)',
-      image: swimImage,
-      audioSrc: danceAudio
+      category: 'Action 2',
+      image: rideImage,
+      color: '#C71C22'
     },
     {
-      category: 'Action (set C)',
-      image: dropImage,
-      audioSrc: diveAudio
+      category: 'Action 3',
+      image: driveImage,
+      color: '#fd7e14'
     },
     {
-      category: 'Animal (set A)',
+      category: 'Action 4',
+      image: readImage,
+      color: '#73A839'
+    },    
+    {
+      category: 'Nature 1',
+      image: dewImage,
+      color: '#20c997'
+    },
+    {
+      category: 'Nature 2',
+      image: seaImage,
+      color: '#2FA4E7'
+    }, 
+    {
+      category: 'Animal 1',
       image: catImage,
-      audioSrc: drawAudio
+      color: '#C71C22'
     },
     {
-      category: 'Animal (set B)',
+      category: 'Animal 2',
       image: birdImage,
-      audioSrc: fishAudio
-    },
+      color: '#008080'
+    }, 
     {
       category: 'Adjective',
       image: friendlyImage,
-      audioSrc: flyAudio
+      color: '#C71585'
     },
     {
       category: 'Clothes',
       image: blouseImage,
-      audioSrc: hugAudio
+      color: '#90EE90'
     },
     {
       category: 'Emotion',
       image: smileImage,
-      audioSrc: jumpAudio
-    }
+      color: '#FFFF00'
+    },
+    {
+      category: 'Transport',
+      image: bikeImage,
+      color: '#87CEFA'
+    },
   ],
   [
     {
       word: 'cry',
       translation: 'плакать',
-      image: cryImage,
-      audioSrc: cryAudio
+      image: cryImage
     },
     {
       word: 'dance',
       translation: 'танцевать',
-      image: danceImage,
-      audioSrc: danceAudio
+      image: danceImage
     },
     {
       word: 'dive',
       translation: 'нырять',
-      image: diveImage,
-      audioSrc: diveAudio
+      image: diveImage
     },
     {
       word: 'draw',
       translation: 'рисовать',
-      image: drawImage,
-      audioSrc: drawAudio
+      image: drawImage
     },
     {
       word: 'fish',
       translation: 'ловить рыбу',
-      image: fishImage,
-      audioSrc: fishAudio
+      image: fishImage
     },
     {
       word: 'fly',
       translation: 'летать',
-      image: flyImage,
-      audioSrc: flyAudio
+      image: flyImage
     },
     {
       word: 'hug',
       translation: 'обнимать',
-      image: hugImage,
-      audioSrc: hugAudio
+      image: hugImage
     },
     {
       word: 'jump',
       translation: 'прыгать',
-      image: jumpImage,
-      audioSrc: jumpAudio
+      image: jumpImage
     }
   ],
   [
     {
       word: 'open',
       translation: 'открывать',
-      image: openImage,
-      audioSrc: openAudio
+      image: openImage
     },
     {
       word: 'play',
       translation: 'играть',
-      image: playImage,
-      audioSrc: playAudio
+      image: playImage
     },
     {
       word: 'point',
       translation: 'указывать',
-      image: pointImage,
-      audioSrc: pointAudio
+      image: pointImage
     },
     {
       word: 'ride',
       translation: 'ездить',
-      image: rideImage,
-      audioSrc: rideAudio
+      image: rideImage
     },
     {
       word: 'run',
       translation: 'бегать',
-      image: runImage,
-      audioSrc: runAudio
+      image: runImage
     },
     {
       word: 'sing',
       translation: 'петь',
-      image: singImage,
-      audioSrc: singAudio
+      image: singImage
     },
     {
       word: 'skip',
       translation: 'пропускать, прыгать',
-      image: skipImage,
-      audioSrc: skipAudio
+      image: skipImage
     },
     {
       word: 'swim',
       translation: 'плавать',
-      image: swimImage,
-      audioSrc: swimAudio
+      image: swimImage
     }
   ],
   [
     {
       word: 'argue',
       translation: 'спорить',
-      image: argueImage,
-      audioSrc: argueAudio
+      image: argueImage
     },
     {
       word: 'build',
       translation: 'строить',
-      image: buildImage,
-      audioSrc: buildAudio
+      image: buildImage
     },
     {
       word: 'carry',
       translation: 'нести',
-      image: carryImage,
-      audioSrc: carryAudio
+      image: carryImage
     },
     {
       word: 'catch',
       translation: 'ловить',
-      image: catchImage,
-      audioSrc: catchAudio
+      image: catchImage
     },
     {
       word: 'drive',
       translation: 'водить машину',
-      image: driveImage,
-      audioSrc: driveAudio
+      image: driveImage
     },
     {
       word: 'drop',
       translation: 'падать',
-      image: dropImage,
-      audioSrc: dropAudio
+      image: dropImage
     },
     {
       word: 'pull',
       translation: 'тянуть',
-      image: pullImage,
-      audioSrc: pullAudio
+      image: pullImage
     },
     {
       word: 'push',
       translation: 'толкать',
-      image: pushImage,
-      audioSrc: pushAudio
+      image: pushImage
+    }
+  ],  
+  [
+    {
+      word: 'clean',
+      translation: 'убирать',
+      image: cleanImage
+    },
+    {
+      word: 'cook',
+      translation: 'готовить',
+      image: cookImage
+    },
+    {
+      word: 'eat',
+      translation: 'есть',
+      image: eatImage
+    },
+    {
+      word: 'read',
+      translation: 'читать',
+      image: readImage
+    },
+    {
+      word: 'sit',
+      translation: 'сидеть',
+      image: sitImage
+    },
+    {
+      word: 'stand',
+      translation: 'стоять',
+      image: standImage
+    },
+    {
+      word: 'sleep',
+      translation: 'спать',
+      image: sleepImage
+    },
+    {
+      word: 'talk',
+      translation: 'говорить',
+      image: talkImage
+    }
+  ],
+  [
+    {
+      word: 'sun',
+      translation: 'солнце',
+      image: sunImage
+    },
+    {
+      word: 'rain',
+      translation: 'дождь',
+      image: rainImage
+    },
+    {
+      word: 'cloud',
+      translation: 'облако',
+      image: cloudImage
+    },
+    {
+      word: 'moon',
+      translation: 'луна',
+      image: moonImage
+    },
+    {
+      word: 'waterfall',
+      translation: 'водопад',
+      image: waterfallImage
+    },
+    {
+      word: 'rainbow',
+      translation: 'радуга',
+      image: rainbowImage
+    },
+    {
+      word: 'stars',
+      translation: 'звёзды',
+      image: starsImage
+    },
+    {
+      word: 'dew',
+      translation: 'роса',
+      image: dewImage
+    }
+  ],
+  [
+    {
+      word: 'grass',
+      translation: 'трава',
+      image: grassImage
+    },
+    {
+      word: 'tree',
+      translation: 'дерево',
+      image: treeImage
+    },
+    {
+      word: 'flower',
+      translation: 'цветок',
+      image: flowerImage
+    },
+    {
+      word: 'forest',
+      translation: 'лес',
+      image: forestImage
+    },
+    {
+      word: 'river',
+      translation: 'река',
+      image: riverImage
+    },
+    {
+      word: 'sea',
+      translation: 'море',
+      image: seaImage
+    },
+    {
+      word: 'desert',
+      translation: 'пустыня',
+      image: desertImage
+    },
+    {
+      word: 'garden',
+      translation: 'сад',
+      image: gardenImage
     }
   ],
   [
     {
       word: 'cat',
       translation: 'кот',
-      image: catImage,
-      audioSrc: catAudio
+      image: catImage
     },
     {
       word: 'chick',
       translation: 'цыплёнок',
-      image: chickImage,
-      audioSrc: chickAudio
+      image: chickImage
     },
     {
       word: 'chicken',
       translation: 'курица',
-      image: chickenImage,
-      audioSrc: chickenAudio
+      image: chickenImage
     },
     {
       word: 'dog',
       translation: 'собака',
-      image: dogImage,
-      audioSrc: dogAudio
+      image: dogImage
     },
     {
       word: 'horse',
       translation: 'лошадь',
-      image: horseImage,
-      audioSrc: horseAudio
+      image: horseImage
     },
     {
       word: 'pig',
       translation: 'свинья',
-      image: pigImage,
-      audioSrc: pigAudio
+      image: pigImage
     },
     {
       word: 'rabbit',
       translation: 'кролик',
-      image: rabbitImage,
-      audioSrc: rabbitAudio
+      image: rabbitImage
     },
     {
       word: 'sheep',
       translation: 'овца',
-      image: sheepImage,
-      audioSrc: sheepAudio
+      image: sheepImage
     }
   ],
   [
     {
       word: 'bird',
       translation: 'птица',
-      image: birdImage,
-      audioSrc: birdAudio
+      image: birdImage
     },
     {
       word: 'fish',
       translation: 'рыба',
-      image: fish1Image,
-      audioSrc: fish1Audio
+      image: fish1Image
     },
     {
       word: 'frog',
       translation: 'жаба',
-      image: frogImage,
-      audioSrc: frogAudio
+      image: frogImage
     },
     {
       word: 'giraffe',
       translation: 'жирафа',
-      image: giraffeImage,
-      audioSrc: giraffeAudio
+      image: giraffeImage
     },
     {
       word: 'lion',
       translation: 'лев',
-      image: lionImage,
-      audioSrc: lionAudio
+      image: lionImage
     },
     {
       word: 'mouse',
       translation: 'мышь',
-      image: mouseImage,
-      audioSrc: mouseAudio
+      image: mouseImage
     },
     {
       word: 'turtle',
       translation: 'черепаха',
-      image: turtleImage,
-      audioSrc: turtleAudio
+      image: turtleImage
     },
     {
       word: 'dolphin',
       translation: 'дельфин',
-      image: dolphinImage,
-      audioSrc: dolphinAudio
+      image: dolphinImage
     }
   ],
-    [
+  [
     {
       word: 'big',
       translation: 'большой',
-      image: bigImage,
-      audioSrc: bigAudio
+      image: bigImage
     },
     {
       word: 'small',
       translation: 'маленький',
-      image: smallImage,
-      audioSrc: smallAudio
+      image: smallImage
     },
     {
       word: 'fast',
       translation: 'быстрый',
-      image: fastImage,
-      audioSrc: fastAudio
+      image: fastImage
     },
     {
       word: 'slow',
       translation: 'медленный',
-      image: slowImage,
-      audioSrc: slowAudio
+      image: slowImage
     },
     {
       word: 'friendly',
       translation: 'дружелюбный',
-      image: friendlyImage,
-      audioSrc: friendlyAudio
+      image: friendlyImage
     },
     {
       word: 'unfriendly',
       translation: 'недружелюбный',
-      image: unfriendlyImage,
-      audioSrc: unfriendlyAudio
+      image: unfriendlyImage
     },
     {
       word: 'young',
       translation: 'молодой',
-      image: youngImage,
-      audioSrc: youngAudio
+      image: youngImage
     },
     {
       word: 'old',
       translation: 'старый',
-      image: oldImage,
-      audioSrc: oldAudio
+      image: oldImage
     }
   ],
   [
     {
       word: 'skirt',
       translation: 'юбка',
-      image: skirtImage,
-      audioSrc: skirtAudio
+      image: skirtImage
     },
     {
       word: 'pants',
       translation: 'брюки',
-      image: pantsImage,
-      audioSrc: pantsAudio
+      image: pantsImage
     },
     {
       word: 'blouse',
       translation: 'блузка',
-      image: blouseImage,
-      audioSrc: blouseAudio
+      image: blouseImage
     },
     {
       word: 'dress',
       translation: 'платье',
-      image: dressImage,
-      audioSrc: dressAudio
+      image: dressImage
     },
     {
       word: 'boot',
       translation: 'ботинок',
-      image: bootImage,
-      audioSrc: bootAudio
+      image: bootImage
     },
     {
       word: 'shirt',
       translation: 'рубашка',
-      image: shirtImage,
-      audioSrc: shirtAudio
+      image: shirtImage
     },
     {
       word: 'coat',
       translation: 'пальто',
-      image: coatImage,
-      audioSrc: coatAudio
+      image: coatImage
     },
     {
       word: 'shoe',
       translation: 'туфли',
-      image: shoeImage,
-      audioSrc: shoeAudio
+      image: shoeImage
     }
   ],
   [
     {
       word: 'sad',
       translation: 'грустный',
-      image: sadImage,
-      audioSrc: sadAudio
+      image: sadImage
     },
     {
       word: 'angry',
       translation: 'сердитый',
-      image: angryImage,
-      audioSrc: angryAudio
+      image: angryImage
     },
     {
       word: 'happy',
       translation: 'счастливый',
-      image: happyImage,
-      audioSrc: happyAudio
+      image: happyImage
     },
     {
       word: 'tired',
       translation: 'уставший',
-      image: tiredImage,
-      audioSrc: tiredAudio
+      image: tiredImage
     },
     {
       word: 'surprised',
       translation: 'удивлённый',
-      image: surprisedImage,
-      audioSrc: surprisedAudio
+      image: surprisedImage
     },
     {
       word: 'scared',
       translation: 'испуганный',
-      image: scaredImage,
-      audioSrc: scaredAudio
+      image: scaredImage
     },
     {
       word: 'smile',
       translation: 'улыбка',
-      image: smileImage,
-      audioSrc: smileAudio
+      image: smileImage
     },
     {
       word: 'laugh',
       translation: 'смех',
-      image: laughImage,
-      audioSrc: laughAudio
+      image: laughImage
+    }
+  ],
+  [
+    {
+      word: 'airplane',
+      translation: 'самолёт',
+      image: airplaneImage
+    },
+    {
+      word: 'bus',
+      translation: 'автобус',
+      image: busImage
+    },
+    {
+      word: 'bike',
+      translation: 'велосипед',
+      image: bikeImage
+    },
+    {
+      word: 'car',
+      translation: 'автомобиль',
+      image: carImage
+    },
+    {
+      word: 'boat',
+      translation: 'лодка',
+      image: boatImage
+    },
+    {
+      word: 'tractor',
+      translation: 'трактор',
+      image: tractorImage
+    },
+    {
+      word: 'train',
+      translation: 'поезд',
+      image: trainImage
+    },
+    {
+      word: 'ship',
+      translation: 'корабль',
+      image: shipImage
     }
   ]
 ]

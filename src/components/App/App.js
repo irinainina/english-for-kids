@@ -16,6 +16,7 @@ class App extends Component {
     page: 0,
     currentCard: 0,
     play: false,
+    playActive: false,
     randomArr: [],
     step: 1,
     errors: 0,
@@ -30,8 +31,8 @@ class App extends Component {
   }
 
   shuffle = (arr) => {
-      var j, temp;
-      for(var i = arr.length - 1; i > 0; i--){
+      let j, temp;
+      for(let i = arr.length - 1; i > 0; i--){
           j = Math.floor(Math.random()*(i + 1));
           temp = arr[j];
           arr[j] = arr[i];
@@ -47,6 +48,7 @@ class App extends Component {
       currentCard: 0,
       step: 1,
       errors: 0,
+      playActive: false,
       endGame: false
     }); 
     const fronts = document.querySelectorAll('.front');
@@ -73,7 +75,7 @@ class App extends Component {
 
   playCurrentAudio = (index) => {
     const audio = document.querySelector('.audio');
-    const src= `${cardsData[this.state.page][index].audioSrc}`;
+    const src= `https://wooordhunt.ru/data/sound/word/us/mp3/${cardsData[this.state.page][index].word}.mp3`;
     this.playAudio(audio, src);
   }
   
@@ -84,18 +86,21 @@ class App extends Component {
     });
     if(!this.state.play) {
       this.playCurrentAudio(index);
-    } else {
+    } else if(this.state.play && this.state.playActive) {
       this.getWinOrError(event,index);
-    }
+    } 
   }
   
   playCame = (event) => {
     if(!event.target.classList.contains('repeat')) {
       event.target.classList.add('repeat');
     }
+    this.setState({
+      playActive: true
+    });
     const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step];
     const audio = document.querySelector('.audio');
-    const src= `${cardsData[this.state.page][randomItem].audioSrc}`;
+    const src= `https://wooordhunt.ru/data/sound/word/us/mp3/${cardsData[this.state.page][randomItem].word}.mp3`;
     this.playAudio(audio, src);
   }
   
@@ -121,8 +126,8 @@ class App extends Component {
         setTimeout(() => this.gameEnd('start'), 4000);
         return;
       };
-      const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step - 1];    
-      const src1= `${cardsData[this.state.page][randomItem].audioSrc}`;
+      const randomItem = this.state.randomArr[this.state.randomArr.length - this.state.step - 1]; 
+      const src1 = `https://wooordhunt.ru/data/sound/word/us/mp3/${cardsData[this.state.page][randomItem].word}.mp3`; 
       setTimeout(() => this.playAudio(audio, src1), 1000);
       this.setState((prevState) => ({
         step: prevState.step + 1
@@ -151,6 +156,7 @@ class App extends Component {
     const cards = document.querySelectorAll('.card');
     const btn = document.querySelector('.btn');
     const switchContainer = document.querySelector('.switch-container');
+    const cardTitle = document.querySelector('.container h2');
     
     if(this.state.errors === 0) {
       body.classList.add('succes');
@@ -166,10 +172,12 @@ class App extends Component {
       cards.forEach(card => card.style.display = 'none'); 
       btn.style.display = 'none';
       switchContainer.style.display = 'none';
+      cardTitle.style.display = 'none';
       this.playAudio(sound, src);
     } else if(result === 'start') {
       rating.textContent = '';
       rating.style.justifyContent = 'flex-end';
+      cardTitle.style.display = 'block';
       body.classList.remove('failure');
       body.classList.remove('succes');
       rating.style.display = 'flex';
@@ -178,11 +186,12 @@ class App extends Component {
       switchContainer.style.display = 'block';
       this.setState({ 
         endGame: true,
+        playActive: false,
         page: 0
       });
     }   
   }
- 
+
   closeMenu = (event) => {
     const input = document.querySelector('.menuToggle input');
     const menu = document.querySelector('.menu');
@@ -193,6 +202,7 @@ class App extends Component {
   
   onHeaderClick = () => {
     this.setState({
+      playActive: false,
       page: 0
     });
  }
@@ -202,6 +212,7 @@ class App extends Component {
       play: !prevState.play,
       randomArr: this.shuffle([0, 1, 2, 3, 4, 5, 6, 7]),
       step: 1,
+      playActive: false,
       errors: 0
     }));
     const fronts = document.querySelectorAll('.front');
@@ -217,7 +228,7 @@ class App extends Component {
   }
   
   render() {
-    const { page, play, endGame } = this.state; 
+    const { page, play, playActive, endGame } = this.state; 
     if(endGame) 
     return (
       <div className="app-container" 
@@ -258,6 +269,7 @@ class App extends Component {
           path={'/cards'}
           render={() => <Card page={page}
           play={play}
+          playActive={playActive}
           onCardClick={this.onCardClick}
           onBtnClick={(event) => this.playCame(event)} />}
           exact

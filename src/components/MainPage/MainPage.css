@@ -1,6 +1,6 @@
 .main-card {
   width: 300px;
-  height: 280px;
+  height: 210px;
   border-radius: 5px;
   box-shadow:rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
   color: #212529;
@@ -23,12 +23,12 @@
 }
 
 .main-card img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 10px solid #ffffff;
   object-fit: cover;
-  margin: 30px auto 30px;
+  margin: 15px auto 5px;
 }
 
 .main-card:hover {
@@ -36,5 +36,5 @@
 }
 
 .main-container {
-  padding-top: 55px;
+  padding-top: 25px;
 }

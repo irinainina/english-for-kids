@@ -15,6 +15,8 @@ nav {
 
 .header-item.active {
   text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: #fff;
 }
 
 .menuToggle {
@@ -80,11 +82,11 @@ nav {
 }
 
 .menu {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   box-sizing: border-box;
   position: absolute;
-  width: 380px;
+  width: calc(50vw - 720px + 360px);
   height: calc(100vh + 20px);
   margin: -100px 0 0 0;
   padding: 50px;
@@ -103,10 +105,21 @@ nav {
 }
 
 .header-item {
+  position: relative;
   padding: 10px 0;
   font-size: 22px;
   cursor: pointer;
   text-decoration: none;
+}
+
+.header-item:hover {  
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-color: rgba(205, 205, 205, .5);
+}
+
+.header-item:nth-child(1) {
+  padding-left: 0;
 }
 
 .menuToggle input:checked ~ ul {
@@ -116,22 +129,31 @@ nav {
 
 @media (max-width: 1430px) {
   .menu {
+    width: calc(50vw - 500px + 320px);
     left: calc(500px - 50vw);
   }
 }
 
 @media (max-width: 1080px) {
   .menu {
+    width: 50vw;
     left: calc(325px - 50vw);
   }
 }
 
 @media (max-width: 730px) {
   .menu {
-    width: 320px;
+    width: 50vw;
     left: calc(150px - 50vw);
   }
   .header-item {
     margin-left: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu {
+    width: 100vw;
+    left: calc(150px - 50vw);
   }
 }
